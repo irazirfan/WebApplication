@@ -1,8 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@* test comment *@
+
+
+@{
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    .testStyleClass {
+        width: 400px;
+        background-color: #00ff90;
+    }
+</style>
+
+<p>@Program.test</p>
+
+@{
+    if (Program.test.Length == 3)
+    {
+        <p>length is three</p>
+    }
+    else
+    {
+        <p>length is not three</p>
+    }
+}
+
+<p>
+    @Html.TextArea("testid","test", new { @class = "testStyleClass" })
+</p>

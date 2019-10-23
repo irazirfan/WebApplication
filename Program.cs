@@ -11,6 +11,7 @@ namespace WebApplication
 {
     public class Program
     {
+        public static string test = "tst";
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
